@@ -12,6 +12,5 @@ app.get('/hello', (c) => {
   })
 })
 
-// export default handle(ap)
 
 export const GET = handle(app)
