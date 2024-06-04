@@ -9,6 +9,13 @@ app.get('/hello', (c) => {
   })
 })
 
+app.get('/wild/*/card', (c) => {
+  return c.json({
+    message: 'Hello from Hono on Vercel!',
+    c
+  })
+})
+
 app.get('/goodbye', (c) => {
   return c.json({
     message: 'Goodbye from Hono!',
