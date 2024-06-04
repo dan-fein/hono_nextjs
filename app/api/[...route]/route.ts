@@ -5,15 +5,13 @@ const app = new Hono().basePath('/api')
 
 app.get('/hello', (c) => {
   return c.json({
-    message: 'Hello from Hono!',
-    c
+    message: 'Hello from Hono!'
   })
 })
 
 app.get('/goodbye', (c) => {
   return c.json({
     message: 'Goodbye from Hono!',
-    c
   })
 })
 
