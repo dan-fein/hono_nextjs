@@ -9,16 +9,17 @@ app.get('/hello', (c) => {
   })
 })
 
-app.get('/:wild', (c) => {
-  const wild = c.req.param('wild')
-  return c.json({
-    message: `Hello from Hono on Vercel! You're now on ${wild}!`
-  })
-})
 
 app.get('/goodbye', (c) => {
   return c.json({
     message: 'Goodbye from Hono!',
+  })
+})
+
+app.get('/:wild', (c) => {
+  const wild = c.req.param('wild')
+  return c.json({
+    message: `Hello from Hono on Vercel! You're now on ${wild}!`
   })
 })
 
